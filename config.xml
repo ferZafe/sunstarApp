@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.fernando.sunstar"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Sunstar App</name>
+
+    <description>
+          WebApp de la famosa cadena de cines Sunstar. Conoce los últimos estrenos,
+          la cartelera la tarifa, todo gracias a Sunstar App.
+    </description>
+
+	<preference name="phonegap-version" value="2.5.0"/>
+	
+	<preference name="orientation" value="portrait" />
+	 
+	<preference name="fullscreen" value="true" />
+	  
+	<icon src="/img/icon.png" />
+
+
+    <author href="https://facebook.com/fernandozz" email="sunstar@sunstar.com">
+        Fernando Zafe
+    </author>
+
+</widget>
