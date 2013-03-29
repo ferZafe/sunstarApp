@@ -3,12 +3,13 @@
 <script src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
 
 <!-- Home -->
-<!DOCTYPE >
+<!DOCTYPE html>
 <html>
-	<head>
-		
-		<script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
-    	<script type="text/javascript" charset="utf-8">
+  <head>
+    <title>Device Properties Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
     // Wait for Cordova to load
     //
@@ -23,9 +24,18 @@
     // onSuccess Geolocation
     //
     function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = position.coords.latitude +
-                            ','+ position.coords.longitude }
+       /* var element = document.getElementById('geolocation');
+        element.innerHTML = position.coords.latitude + ',' 
+        				  + position.coords.longitude;*/
+        				 
+        codigo1 = '<div data-role="page" id="page1"><div data-theme="a" data-role="header"><a data-role="button" href="index.html" data-icon="home" data-iconpos="left"class="ui-btn-left">Home</a><h3>Sunstar</h3></div>';				 
+        codigo2 = '<div data-role="content"></div><div data-theme="a" data-role="footer" data-position="fixed"><h3>Sunstar SA</h3></div></div>';
+        link1 = "\"https://maps.googleapis.com/maps/api/staticmap?center=";
+        link2 = "&amp;zoom=15&amp;size=288x300&amp;markers=&amp;sensor=false\"";
+        ancho = "\"device-width\"";
+        alto = "\"300\"";
+       document.write( codigo1 + "<img src=" + link1 + position.coords.latitude + position.coords.longitude + link2 + " width=" + ancho + " height=" + alto + ">" + codigo2); 
+    }
 
     // onError Callback receives a PositionError object
     //
@@ -35,12 +45,10 @@
     }
 
     </script>
-		<title>
-			Sunstar Cinema
-		</title>
-	</head>
-	<body>
-<div data-role="page" id="page1">
+  </head>
+  <body>
+    <!-- <p id="geolocation">Finding geolocation...</p> -->
+    <div data-role="page" id="page1">
     <div data-theme="a" data-role="header">
         <a data-role="button" href="index.html" data-icon="home" data-iconpos="left"
         class="ui-btn-left">
@@ -52,11 +60,8 @@
     </div>
     <div data-role="content">
         <h3>
-            Encuentra tu Sunstar más cercano!
+            Tu Sunstar más cercano es:
         </h3>
-        <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center="+ id="geolocation" + "&amp;zoom=12&amp;size=288x300&amp;markers=&amp;sensor=false"
-        width="288" height="300" class="Gmap">
-        
     </div>
     <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
@@ -64,5 +69,6 @@
         </h3>
     </div>
 </div>
-</body>
+    
+  </body>
 </html>
